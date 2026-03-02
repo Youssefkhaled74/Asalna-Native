@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Asalna | Pure Honey, Straight From Nature</title>
+  <meta name="description" content="Discover Asalna premium honey collection: raw, mountain, black seed, citrus, and sidr honey crafted with luxury quality and organic care.">
+  <meta name="keywords" content="Asalna, premium honey, raw honey, mountain honey, sidr honey, organic honey">
+  <meta property="og:title" content="Asalna | Pure Honey, Straight From Nature">
+  <meta property="og:description" content="Luxury organic honey from trusted beekeepers. Explore our premium varieties.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/images/facebook-cover.png">
+  <meta property="og:url" content="https://asalna.example.com/">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Marai:wght@400;700&family=Playfair+Display:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            honeyGold: '#B07A14',
+            honeyLight: '#F6E7C1',
+            honeyDark: '#4A2E12',
+            charcoal: '#15120E'
+          },
+          boxShadow: {
+            soft: '0 20px 50px rgba(30, 19, 8, 0.12)',
+            gold: '0 8px 24px rgba(176, 122, 20, 0.28)'
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body class="bg-white text-charcoal antialiased">
+  <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-honeyGold text-white px-4 py-2 rounded-md z-50">Skip to content</a>
+
+  <div id="navbar-root" data-component="navbar"></div>
+
+  <main id="main-content">
+    <section class="relative min-h-screen flex items-center pt-24 overflow-hidden">
+      <img src="assets/images/facebook-cover.png" alt="Asalna premium honey brand cover" class="absolute inset-0 w-full h-full object-cover" loading="eager">
+      <div class="absolute inset-0 bg-gradient-to-r from-charcoal/80 via-charcoal/50 to-transparent"></div>
+      <div class="relative z-10 w-full max-w-7xl mx-auto px-6 sm:px-8">
+        <div class="max-w-2xl reveal-fade">
+          <p class="uppercase tracking-[0.24em] text-honeyLight font-semibold text-xs sm:text-sm mb-4" data-i18n="heroKicker">Luxury Organic Honey</p>
+          <h1 class="font-display text-4xl sm:text-5xl lg:text-6xl leading-tight text-white" data-i18n="heroTitle">Pure Honey, Straight From Nature</h1>
+          <p class="mt-6 text-honeyLight/90 text-base sm:text-lg leading-relaxed" data-i18n="heroText">Hand-harvested from pristine fields and mountain blooms, crafted for those who value authenticity, purity, and premium taste.</p>
+          <div class="mt-8 flex flex-col sm:flex-row gap-4">
+            <a href="pages/shop.html" class="btn-premium inline-flex items-center justify-center" data-i18n="shopNow">Shop Now</a>
+            <a href="#why-asalna" class="inline-flex items-center justify-center px-7 py-3 rounded-full border border-white/40 text-white hover:bg-white/10 transition" data-i18n="whyAsalna">Why Asalna</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-20 sm:py-24 bg-white">
+      <div class="max-w-7xl mx-auto px-6 sm:px-8">
+        <div class="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-5 mb-12 reveal-fade">
+          <div>
+            <p class="section-kicker" data-i18n="signatureCollection">Signature Collection</p>
+            <h2 class="section-title" data-i18n="craftedVarieties">Crafted Honey Varieties</h2>
+          </div>
+          <a href="pages/shop.html" class="text-honeyGold font-semibold hover:text-honeyDark transition" data-i18n="viewFullShop">View Full Shop</a>
+        </div>
+        <div id="featuredProducts" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+      </div>
+    </section>
+
+    <section id="why-asalna" class="py-20 sm:py-24 bg-[radial-gradient(circle_at_top,#fff7e6_0%,#f7f1e6_55%,#f2ece0_100%)]">
+      <div class="max-w-7xl mx-auto px-6 sm:px-8">
+        <div class="text-center max-w-2xl mx-auto mb-12 reveal-fade">
+          <p class="section-kicker" data-i18n="whyChooseAsalna">Why Choose Asalna</p>
+          <h2 class="section-title" data-i18n="trustedPurity">Trusted Purity In Every Spoon</h2>
+        </div>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <article class="feature-card reveal-rise">
+            <div class="feature-icon">🌿</div>
+            <h3 class="feature-title" data-i18n="featureOrganicTitle">Organic</h3>
+            <p class="feature-text" data-i18n="featureOrganicText">Sourced from clean ecosystems with naturally thriving wildflowers.</p>
+          </article>
+          <article class="feature-card reveal-rise">
+            <div class="feature-icon">🍯</div>
+            <h3 class="feature-title" data-i18n="featureNaturalTitle">100% Natural</h3>
+            <p class="feature-text" data-i18n="featureNaturalText">Unprocessed honey preserving aroma, enzymes, and nutrients.</p>
+          </article>
+          <article class="feature-card reveal-rise">
+            <div class="feature-icon">✅</div>
+            <h3 class="feature-title" data-i18n="featureNoAdditivesTitle">No Additives</h3>
+            <p class="feature-text" data-i18n="featureNoAdditivesText">No sugar syrups, flavors, or artificial ingredients. Pure only.</p>
+          </article>
+          <article class="feature-card reveal-rise">
+            <div class="feature-icon">🧪</div>
+            <h3 class="feature-title" data-i18n="featureLabTitle">Lab Tested</h3>
+            <p class="feature-text" data-i18n="featureLabText">Quality tested for safety, authenticity, and premium standards.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-20 sm:py-24 bg-white">
+      <div class="max-w-7xl mx-auto px-6 sm:px-8">
+        <div class="text-center max-w-2xl mx-auto mb-12 reveal-fade">
+          <p class="section-kicker" data-i18n="testimonials">Testimonials</p>
+          <h2 class="section-title" data-i18n="lovedBy">Loved By Honey Connoisseurs</h2>
+        </div>
+        <div class="testimonial-shell reveal-fade">
+          <div id="testimonialTrack" class="testimonial-track">
+            <article class="testimonial-slide">
+              <p>"Asalna Sidr Honey has unmatched depth and purity. It tastes genuinely luxurious."</p>
+              <h3>Layla M.</h3>
+            </article>
+            <article class="testimonial-slide">
+              <p>"The packaging, flavor, and consistency make this my favorite premium honey brand."</p>
+              <h3>Omar R.</h3>
+            </article>
+            <article class="testimonial-slide">
+              <p>"I use Black Seed Honey daily. You can feel the difference in quality right away."</p>
+              <h3>Nora A.</h3>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-20 bg-gradient-to-r from-honeyDark to-[#2f1d0b] text-white">
+      <div class="max-w-4xl mx-auto px-6 sm:px-8 text-center reveal-fade">
+        <p class="section-kicker text-honeyLight" data-i18n="newsletter">Newsletter</p>
+        <h2 class="font-display text-3xl sm:text-4xl mb-4" data-i18n="newsletterTitle">Get Exclusive Honey Drops</h2>
+        <p class="text-honeyLight/90 mb-8" data-i18n="newsletterText">Subscribe for first access to limited harvests and premium seasonal collections.</p>
+        <form class="flex flex-col sm:flex-row items-center gap-3 max-w-xl mx-auto" aria-label="Newsletter Subscription">
+          <label for="newsletterEmail" class="sr-only">Email address</label>
+          <input id="newsletterEmail" type="email" required placeholder="Enter your email" data-i18n-placeholder="emailPlaceholder" class="w-full px-5 py-3 rounded-full text-charcoal focus:outline-none focus:ring-2 focus:ring-honeyGold">
+          <button type="submit" class="btn-premium w-full sm:w-auto" data-i18n="subscribe">Subscribe</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <div id="footer-root" data-component="footer"></div>
+
+  <div id="quickViewModal" class="fixed inset-0 z-[70] hidden" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="absolute inset-0 bg-charcoal/60" data-close-modal></div>
+    <div class="relative h-full flex items-center justify-center p-6">
+      <div class="bg-white w-full max-w-3xl rounded-3xl shadow-soft overflow-hidden">
+        <div class="grid md:grid-cols-2">
+          <img id="modalImage" src="assets/images/raw-honey.svg" alt="Honey product preview" class="w-full h-72 md:h-full object-cover" loading="lazy">
+          <div class="p-8">
+            <button class="ml-auto block text-honeyDark hover:text-honeyGold" aria-label="Close quick view" data-close-modal>✕</button>
+            <p id="modalCategory" class="text-xs tracking-[0.2em] uppercase text-honeyGold font-semibold mt-2"></p>
+            <h3 id="modalName" class="font-display text-3xl text-honeyDark mt-2"></h3>
+            <p id="modalDescription" class="text-sm text-charcoal/75 mt-4 leading-relaxed"></p>
+            <div class="flex items-center justify-between mt-6">
+              <span id="modalPrice" class="text-2xl font-bold text-honeyDark"></span>
+              <button id="modalAddToCart" class="btn-premium" data-i18n="add">Add</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

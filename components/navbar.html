@@ -1,0 +1,35 @@
+<nav class="fixed top-0 left-0 right-0 z-50 border-b border-white/15 bg-white/65 backdrop-blur-xl shadow-[0_10px_30px_rgba(21,18,14,0.08)]">
+  <div class="max-w-7xl mx-auto px-6 sm:px-8 h-20 flex items-center justify-between">
+    <a href="{{HOME_LINK}}" class="flex items-center gap-3" aria-label="Asalna Home">
+      <img src="{{LOGO_SRC}}" alt="Asalna logo" class="h-12 w-auto object-contain" loading="eager">
+    </a>
+
+    <button id="mobileMenuButton" class="lg:hidden inline-flex items-center justify-center w-11 h-11 rounded-full border border-honeyGold/35 text-honeyDark" aria-expanded="false" aria-controls="mobileMenu" aria-label="Toggle navigation">
+      <span class="sr-only">Toggle menu</span>
+      ☰
+    </button>
+
+    <div class="hidden lg:flex items-center gap-8">
+      <a href="{{HOME_LINK}}" data-nav="home" data-i18n="navHome" class="nav-link">Home</a>
+      <a href="{{SHOP_LINK}}" data-nav="shop" data-i18n="navShop" class="nav-link">Shop</a>
+      <a href="{{ABOUT_LINK}}" data-nav="about" data-i18n="navAbout" class="nav-link">About</a>
+      <a href="{{CONTACT_LINK}}" data-nav="contact" data-i18n="navContact" class="nav-link">Contact</a>
+      <a href="{{SHOP_LINK}}" class="relative nav-link" aria-label="Cart">
+        <span data-i18n="navCart">Cart</span>
+        <span id="cartCounter" class="absolute -top-2 -right-4 min-w-[1.25rem] h-5 px-1 rounded-full bg-honeyGold text-white text-[11px] grid place-items-center">0</span>
+      </a>
+      <button id="langToggle" class="px-4 py-2 rounded-full border border-honeyGold/35 text-sm font-semibold text-honeyDark hover:bg-honeyLight transition" type="button">AR</button>
+    </div>
+  </div>
+
+  <div id="mobileMenu" class="lg:hidden hidden border-t border-honeyGold/20 bg-white/90 backdrop-blur-xl">
+    <div class="px-6 py-4 flex flex-col gap-4 text-sm font-semibold">
+      <a href="{{HOME_LINK}}" data-nav="home" data-i18n="navHome" class="nav-link">Home</a>
+      <a href="{{SHOP_LINK}}" data-nav="shop" data-i18n="navShop" class="nav-link">Shop</a>
+      <a href="{{ABOUT_LINK}}" data-nav="about" data-i18n="navAbout" class="nav-link">About</a>
+      <a href="{{CONTACT_LINK}}" data-nav="contact" data-i18n="navContact" class="nav-link">Contact</a>
+      <a href="{{SHOP_LINK}}" class="inline-flex items-center gap-2 nav-link"><span data-i18n="navCart">Cart</span> <span id="cartCounterMobile" class="min-w-[1.25rem] h-5 px-1 rounded-full bg-honeyGold text-white text-[11px] grid place-items-center">0</span></a>
+      <button id="langToggleMobile" class="w-fit px-4 py-2 rounded-full border border-honeyGold/35 text-sm font-semibold text-honeyDark hover:bg-honeyLight transition" type="button">AR</button>
+    </div>
+  </div>
+</nav>

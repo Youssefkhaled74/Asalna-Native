@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shop Premium Honey | Asalna</title>
+  <meta name="description" content="Shop Asalna luxury honey collection including raw, mountain, black seed, citrus and sidr honey.">
+  <meta property="og:title" content="Asalna Shop | Premium Honey Collection">
+  <meta property="og:description" content="Explore all Asalna honey varieties and find your perfect natural blend.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="../assets/images/raw-honey.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Marai:wght@400;700&family=Playfair+Display:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            honeyGold: '#B07A14',
+            honeyLight: '#F6E7C1',
+            honeyDark: '#4A2E12',
+            charcoal: '#15120E'
+          },
+          boxShadow: {
+            soft: '0 20px 50px rgba(30, 19, 8, 0.12)',
+            gold: '0 8px 24px rgba(176, 122, 20, 0.28)'
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+<body class="bg-white text-charcoal antialiased">
+  <div id="navbar-root" data-component="navbar"></div>
+
+  <main class="pt-28 pb-20">
+    <section class="max-w-7xl mx-auto px-6 sm:px-8">
+      <div class="mb-10 reveal-fade">
+        <p class="section-kicker" data-i18n="storeKicker">Asalna Store</p>
+        <h1 class="section-title" data-i18n="shopTitle">Premium Honey Collection</h1>
+        <p class="text-charcoal/70 mt-3 max-w-2xl" data-i18n="shopText">Each jar is carefully sourced and cold-packed to preserve natural antioxidants, enzymes, and signature floral notes.</p>
+      </div>
+
+      <div class="flex flex-wrap gap-3 mb-10 reveal-fade" aria-label="Product filters">
+        <button class="filter-btn active" data-filter="all" data-i18n="filterAll">All</button>
+        <button class="filter-btn" data-filter="Raw" data-i18n="filterRaw">Raw Honey</button>
+        <button class="filter-btn" data-filter="Mountain" data-i18n="filterMountain">Mountain Honey</button>
+        <button class="filter-btn" data-filter="Sidr" data-i18n="filterSidr">Sidr Honey</button>
+      </div>
+
+      <div id="shopGrid" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+    </section>
+  </main>
+
+  <div id="footer-root" data-component="footer"></div>
+
+  <div id="quickViewModal" class="fixed inset-0 z-[70] hidden" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="absolute inset-0 bg-charcoal/60" data-close-modal></div>
+    <div class="relative h-full flex items-center justify-center p-6">
+      <div class="bg-white w-full max-w-3xl rounded-3xl shadow-soft overflow-hidden">
+        <div class="grid md:grid-cols-2">
+          <img id="modalImage" src="../assets/images/raw-honey.svg" alt="Honey product preview" class="w-full h-72 md:h-full object-cover" loading="lazy">
+          <div class="p-8">
+            <button class="ml-auto block text-honeyDark hover:text-honeyGold" aria-label="Close quick view" data-close-modal>✕</button>
+            <p id="modalCategory" class="text-xs tracking-[0.2em] uppercase text-honeyGold font-semibold mt-2"></p>
+            <h3 id="modalName" class="font-display text-3xl text-honeyDark mt-2"></h3>
+            <p id="modalDescription" class="text-sm text-charcoal/75 mt-4 leading-relaxed"></p>
+            <div class="flex items-center justify-between mt-6">
+              <span id="modalPrice" class="text-2xl font-bold text-honeyDark"></span>
+              <button id="modalAddToCart" class="btn-premium" data-i18n="add">Add</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="../assets/js/main.js"></script>
+  <script src="../assets/js/shop.js"></script>
+</body>
+</html>

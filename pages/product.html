@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Details | Asalna</title>
+  <meta name="description" content="Explore Asalna honey product details, ingredients, benefits and customer reviews.">
+  <meta property="og:title" content="Asalna Product Details">
+  <meta property="og:description" content="Premium honey with full traceability and rich nutritional value.">
+  <meta property="og:type" content="product">
+  <meta property="og:image" content="../assets/images/sidr-honey.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Marai:wght@400;700&family=Playfair+Display:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            honeyGold: '#B07A14',
+            honeyLight: '#F6E7C1',
+            honeyDark: '#4A2E12',
+            charcoal: '#15120E'
+          },
+          boxShadow: {
+            soft: '0 20px 50px rgba(30, 19, 8, 0.12)',
+            gold: '0 8px 24px rgba(176, 122, 20, 0.28)'
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+<body class="bg-white text-charcoal antialiased">
+  <div id="navbar-root" data-component="navbar"></div>
+
+  <main class="pt-28 pb-20">
+    <section class="max-w-7xl mx-auto px-6 sm:px-8">
+      <div class="grid lg:grid-cols-2 gap-10 items-start">
+        <div class="reveal-fade">
+          <img id="productMainImage" src="../assets/images/sidr-honey.svg" alt="Premium honey jar" class="w-full h-[460px] object-cover rounded-3xl shadow-soft" loading="eager">
+          <div id="galleryThumbs" class="grid grid-cols-3 gap-3 mt-4"></div>
+        </div>
+
+        <article class="reveal-rise">
+          <p id="productCategory" class="section-kicker"></p>
+          <h1 id="productName" class="font-display text-4xl text-honeyDark"></h1>
+          <div class="flex items-center gap-4 mt-4">
+            <span id="productPrice" class="text-3xl font-bold text-honeyDark"></span>
+            <span class="inline-flex items-center px-3 py-1 rounded-full text-xs bg-honeyLight text-honeyDark" data-i18n="inStock">In Stock</span>
+          </div>
+          <p id="productSummary" class="text-charcoal/75 mt-5 leading-relaxed"></p>
+
+          <div class="mt-8 flex items-center gap-3">
+            <label for="quantity" class="font-semibold text-sm" data-i18n="quantity">Quantity</label>
+            <div class="inline-flex rounded-full border border-honeyGold/30 overflow-hidden">
+              <button id="qtyMinus" class="px-4 py-2 hover:bg-honeyLight" aria-label="Decrease quantity">-</button>
+              <input id="quantity" type="number" min="1" value="1" class="w-14 text-center outline-none">
+              <button id="qtyPlus" class="px-4 py-2 hover:bg-honeyLight" aria-label="Increase quantity">+</button>
+            </div>
+          </div>
+
+          <div class="mt-7 flex flex-col sm:flex-row gap-3">
+            <button id="addProductToCart" class="btn-premium" data-i18n="add">Add</button>
+            <a href="shop.html" class="px-7 py-3 rounded-full border border-honeyGold/40 text-honeyDark text-center hover:bg-honeyLight/60 transition" data-i18n="backToShop">Back to Shop</a>
+          </div>
+        </article>
+      </div>
+
+      <section class="mt-16 reveal-fade">
+        <div class="flex flex-wrap gap-3 border-b border-honeyGold/20 pb-4" role="tablist" aria-label="Product details tabs">
+          <button class="tab-btn active" data-tab="description" role="tab" aria-selected="true" data-i18n="tabDescription">Description</button>
+          <button class="tab-btn" data-tab="ingredients" role="tab" aria-selected="false" data-i18n="tabIngredients">Ingredients</button>
+          <button class="tab-btn" data-tab="benefits" role="tab" aria-selected="false" data-i18n="tabBenefits">Benefits</button>
+          <button class="tab-btn" data-tab="reviews" role="tab" aria-selected="false" data-i18n="tabReviews">Reviews</button>
+        </div>
+        <div class="pt-6">
+          <article class="tab-panel active" id="tab-description" role="tabpanel"></article>
+          <article class="tab-panel" id="tab-ingredients" role="tabpanel"></article>
+          <article class="tab-panel" id="tab-benefits" role="tabpanel"></article>
+          <article class="tab-panel" id="tab-reviews" role="tabpanel"></article>
+        </div>
+      </section>
+    </section>
+  </main>
+
+  <div id="footer-root" data-component="footer"></div>
+
+  <script src="../assets/js/main.js"></script>
+  <script src="../assets/js/product.js"></script>
+</body>
+</html>

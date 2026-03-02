@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Asalna | Premium Honey Support</title>
+  <meta name="description" content="Contact Asalna for premium honey orders, wholesale, and customer support.">
+  <meta property="og:title" content="Contact Asalna">
+  <meta property="og:description" content="Get in touch with Asalna honey team.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="../assets/images/hero-honey.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Marai:wght@400;700&family=Playfair+Display:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            honeyGold: '#B07A14',
+            honeyLight: '#F6E7C1',
+            honeyDark: '#4A2E12',
+            charcoal: '#15120E'
+          },
+          boxShadow: {
+            soft: '0 20px 50px rgba(30, 19, 8, 0.12)',
+            gold: '0 8px 24px rgba(176, 122, 20, 0.28)'
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+<body class="bg-white text-charcoal antialiased">
+  <div id="navbar-root" data-component="navbar"></div>
+
+  <main class="pt-28 pb-20">
+    <section class="max-w-7xl mx-auto px-6 sm:px-8 grid lg:grid-cols-2 gap-10">
+      <article class="reveal-fade">
+        <p class="section-kicker" data-i18n="contactUs">Contact Us</p>
+        <h1 class="section-title" data-i18n="contactTitle">We Are Here To Help</h1>
+        <p class="text-charcoal/75 mt-4 leading-relaxed" data-i18n="contactText">For product inquiries, wholesale partnerships, and custom gifting, contact Asalna team and we will respond within one business day.</p>
+
+        <div class="mt-8 space-y-4 text-sm">
+          <p><strong>Email:</strong> hello@asalna.com</p>
+          <p><strong>Phone:</strong> +20 100 000 0000</p>
+          <p><strong>Address:</strong> Cairo, Egypt</p>
+        </div>
+      </article>
+
+      <form class="bg-[#fffaf2] rounded-3xl p-8 shadow-soft reveal-rise" aria-label="Contact form">
+        <div class="grid gap-4">
+          <div>
+            <label for="name" class="text-sm font-semibold" data-i18n="fullName">Full Name</label>
+            <input id="name" type="text" required class="w-full mt-2 px-4 py-3 rounded-xl border border-honeyGold/20 focus:outline-none focus:ring-2 focus:ring-honeyGold/30">
+          </div>
+          <div>
+            <label for="email" class="text-sm font-semibold" data-i18n="email">Email</label>
+            <input id="email" type="email" required class="w-full mt-2 px-4 py-3 rounded-xl border border-honeyGold/20 focus:outline-none focus:ring-2 focus:ring-honeyGold/30">
+          </div>
+          <div>
+            <label for="subject" class="text-sm font-semibold" data-i18n="subject">Subject</label>
+            <input id="subject" type="text" class="w-full mt-2 px-4 py-3 rounded-xl border border-honeyGold/20 focus:outline-none focus:ring-2 focus:ring-honeyGold/30">
+          </div>
+          <div>
+            <label for="message" class="text-sm font-semibold" data-i18n="message">Message</label>
+            <textarea id="message" rows="4" required class="w-full mt-2 px-4 py-3 rounded-xl border border-honeyGold/20 focus:outline-none focus:ring-2 focus:ring-honeyGold/30"></textarea>
+          </div>
+          <button type="submit" class="btn-premium mt-2" data-i18n="sendMessage">Send Message</button>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <div id="footer-root" data-component="footer"></div>
+
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Asalna | Luxury Organic Honey</title>
+  <meta name="description" content="Learn Asalna's mission, vision, and organic beekeeping process behind premium honey production.">
+  <meta property="og:title" content="About Asalna">
+  <meta property="og:description" content="The brand story of premium organic honey crafted with purpose and purity.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="../assets/images/beekeeper.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Marai:wght@400;700&family=Playfair+Display:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            honeyGold: '#B07A14',
+            honeyLight: '#F6E7C1',
+            honeyDark: '#4A2E12',
+            charcoal: '#15120E'
+          },
+          boxShadow: {
+            soft: '0 20px 50px rgba(30, 19, 8, 0.12)',
+            gold: '0 8px 24px rgba(176, 122, 20, 0.28)'
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+<body class="bg-white text-charcoal antialiased">
+  <div id="navbar-root" data-component="navbar"></div>
+
+  <main class="pt-28 pb-20">
+    <section class="max-w-7xl mx-auto px-6 sm:px-8 grid lg:grid-cols-2 gap-10 items-center">
+      <article class="reveal-fade">
+        <p class="section-kicker" data-i18n="aboutStoryKicker">Our Story</p>
+        <h1 class="section-title" data-i18n="aboutTitle">From Fields To Fine Tables</h1>
+        <p class="text-charcoal/75 mt-5 leading-relaxed" data-i18n="aboutText1">Asalna was founded to redefine how premium honey is experienced. We partner with ethical beekeepers and protect bee habitats across mountain valleys, citrus farms, and wildflower plains to deliver honest, remarkable flavor.</p>
+        <p class="text-charcoal/75 mt-4 leading-relaxed" data-i18n="aboutText2">Every batch is traceable and carefully tested, preserving the living character of pure honey while maintaining luxury quality for modern wellness lifestyles.</p>
+      </article>
+      <img src="../assets/images/beekeeper.svg" alt="Asalna beekeeper inspecting honeycomb" class="w-full h-[460px] object-cover rounded-3xl shadow-soft reveal-rise" loading="lazy">
+    </section>
+
+    <section class="max-w-7xl mx-auto px-6 sm:px-8 mt-20">
+      <div class="grid md:grid-cols-2 gap-6">
+        <article class="bg-[#fffaf2] rounded-3xl p-8 reveal-rise">
+          <h2 class="font-display text-3xl text-honeyDark" data-i18n="mission">Mission</h2>
+          <p class="text-charcoal/75 mt-4" data-i18n="missionText">Deliver uncompromised natural honey while supporting sustainable beekeeping communities and biodiversity.</p>
+        </article>
+        <article class="bg-[#fffaf2] rounded-3xl p-8 reveal-rise">
+          <h2 class="font-display text-3xl text-honeyDark" data-i18n="vision">Vision</h2>
+          <p class="text-charcoal/75 mt-4" data-i18n="visionText">Become the benchmark of luxury organic honey, recognized globally for purity, trust, and craftsmanship.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="max-w-7xl mx-auto px-6 sm:px-8 mt-20">
+      <div class="mb-10 reveal-fade">
+        <p class="section-kicker" data-i18n="organicProcess">Organic Process</p>
+        <h2 class="section-title" data-i18n="preservePurity">How We Preserve Purity</h2>
+      </div>
+      <div class="grid lg:grid-cols-3 gap-6">
+        <article class="process-card reveal-rise">
+          <h3>1. Responsible Sourcing</h3>
+          <p>We select apiaries far from pollution with natural forage diversity.</p>
+        </article>
+        <article class="process-card reveal-rise">
+          <h3>2. Gentle Extraction</h3>
+          <p>Cold extraction methods keep enzymes and antioxidants intact.</p>
+        </article>
+        <article class="process-card reveal-rise">
+          <h3>3. Precision Testing</h3>
+          <p>Each batch is lab tested for purity, moisture, and authenticity.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <div id="footer-root" data-component="footer"></div>
+
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>
