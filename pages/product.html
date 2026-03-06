@@ -3,91 +3,69 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Product Details | Asalna</title>
-  <meta name="description" content="Explore Asalna honey product details, ingredients, benefits and customer reviews.">
-  <meta property="og:title" content="Asalna Product Details">
-  <meta property="og:description" content="Premium honey with full traceability and rich nutritional value.">
-  <meta property="og:type" content="product">
-  <meta property="og:image" content="../assets/images/sidr-honey.svg">
+  <title>Product | Asalna</title>
+  <meta name="description" content="Explore each Asalna honey jar with richer detail, cleaner hierarchy, and stronger visual framing.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Marai:wght@400;700&family=Playfair+Display:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Marai:wght@400;700&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            honeyGold: '#B07A14',
-            honeyLight: '#F6E7C1',
-            honeyDark: '#4A2E12',
-            charcoal: '#15120E'
-          },
-          boxShadow: {
-            soft: '0 20px 50px rgba(30, 19, 8, 0.12)',
-            gold: '0 8px 24px rgba(176, 122, 20, 0.28)'
-          }
-        }
-      }
-    }
-  </script>
   <link rel="stylesheet" href="../assets/css/styles.css">
 </head>
-<body class="bg-white text-charcoal antialiased">
+<body class="page-shell antialiased">
   <div id="navbar-root" data-component="navbar"></div>
-
-  <main class="pt-28 pb-20">
-    <section class="max-w-7xl mx-auto px-6 sm:px-8">
-      <div class="grid lg:grid-cols-2 gap-10 items-start">
-        <div class="reveal-fade">
-          <img id="productMainImage" src="../assets/images/sidr-honey.svg" alt="Premium honey jar" class="w-full h-[460px] object-cover rounded-3xl shadow-soft" loading="eager">
-          <div id="galleryThumbs" class="grid grid-cols-3 gap-3 mt-4"></div>
-        </div>
-
-        <article class="reveal-rise">
-          <p id="productCategory" class="section-kicker"></p>
-          <h1 id="productName" class="font-display text-4xl text-honeyDark"></h1>
-          <div class="flex items-center gap-4 mt-4">
-            <span id="productPrice" class="text-3xl font-bold text-honeyDark"></span>
-            <span class="inline-flex items-center px-3 py-1 rounded-full text-xs bg-honeyLight text-honeyDark" data-i18n="inStock">In Stock</span>
-          </div>
-          <p id="productSummary" class="text-charcoal/75 mt-5 leading-relaxed"></p>
-
-          <div class="mt-8 flex items-center gap-3">
-            <label for="quantity" class="font-semibold text-sm" data-i18n="quantity">Quantity</label>
-            <div class="inline-flex rounded-full border border-honeyGold/30 overflow-hidden">
-              <button id="qtyMinus" class="px-4 py-2 hover:bg-honeyLight" aria-label="Decrease quantity">-</button>
-              <input id="quantity" type="number" min="1" value="1" class="w-14 text-center outline-none">
-              <button id="qtyPlus" class="px-4 py-2 hover:bg-honeyLight" aria-label="Increase quantity">+</button>
-            </div>
-          </div>
-
-          <div class="mt-7 flex flex-col sm:flex-row gap-3">
-            <button id="addProductToCart" class="btn-premium" data-i18n="add">Add</button>
-            <a href="shop.html" class="px-7 py-3 rounded-full border border-honeyGold/40 text-honeyDark text-center hover:bg-honeyLight/60 transition" data-i18n="backToShop">Back to Shop</a>
-          </div>
-        </article>
+  <main class="product-hero pb-20">
+    <section class="max-w-7xl mx-auto px-4 sm:px-8 mb-8">
+      <div class="hero-banner reveal-fade">
+        <p class="section-kicker" data-i18n="productHeroKicker">Product detail</p>
+        <h1 class="section-title" data-i18n="productHeroTitle">A jar should feel special before it is opened.</h1>
+        <p class="section-copy" data-i18n="productHeroText">The product page now gives each honey type a stronger sense of story, texture, and justification.</p>
       </div>
-
-      <section class="mt-16 reveal-fade">
-        <div class="flex flex-wrap gap-3 border-b border-honeyGold/20 pb-4" role="tablist" aria-label="Product details tabs">
-          <button class="tab-btn active" data-tab="description" role="tab" aria-selected="true" data-i18n="tabDescription">Description</button>
-          <button class="tab-btn" data-tab="ingredients" role="tab" aria-selected="false" data-i18n="tabIngredients">Ingredients</button>
-          <button class="tab-btn" data-tab="benefits" role="tab" aria-selected="false" data-i18n="tabBenefits">Benefits</button>
-          <button class="tab-btn" data-tab="reviews" role="tab" aria-selected="false" data-i18n="tabReviews">Reviews</button>
+    </section>
+    <section class="max-w-7xl mx-auto px-4 sm:px-8">
+      <div class="detail-panel reveal-scale">
+        <div class="detail-grid">
+          <div>
+            <div class="detail-visual"><img id="productMainImage" src="../assets/images/sidr-honey.svg" alt="Premium honey jar" loading="eager"></div>
+            <div id="galleryThumbs" class="thumb-grid"></div>
+          </div>
+          <article class="detail-copy">
+            <p id="productCategory" class="section-kicker"></p>
+            <h2 id="productName" class="font-display text-6xl text-[#24170c] mt-4"></h2>
+            <div class="inline-pills mt-5">
+              <span id="productPrice" class="price-pill"></span>
+              <span class="status-pill" data-i18n="inStock">In stock</span>
+            </div>
+            <p id="productSummary" class="section-copy"></p>
+            <div class="cta-row mt-6">
+              <label for="quantity" class="sr-only" data-i18n="quantity">Quantity</label>
+              <div class="inline-flex rounded-full overflow-hidden border border-[#24170c]/10 bg-white">
+                <button id="qtyMinus" class="px-4 py-3" aria-label="Decrease quantity">-</button>
+                <input id="quantity" type="number" min="1" value="1" class="w-16 text-center border-0">
+                <button id="qtyPlus" class="px-4 py-3" aria-label="Increase quantity">+</button>
+              </div>
+              <button id="addProductToCart" class="btn-premium" data-i18n="add">Add to cart</button>
+              <a href="shop.html" class="btn-ghost" data-i18n="backToShop">Back to shop</a>
+            </div>
+            <div class="tab-surface mt-8">
+              <div class="tab-row" role="tablist" aria-label="Product details tabs">
+                <button class="tab-btn active" data-tab="description" role="tab" aria-selected="true" data-i18n="tabDescription">Description</button>
+                <button class="tab-btn" data-tab="ingredients" role="tab" aria-selected="false" data-i18n="tabIngredients">Ingredients</button>
+                <button class="tab-btn" data-tab="benefits" role="tab" aria-selected="false" data-i18n="tabBenefits">Benefits</button>
+                <button class="tab-btn" data-tab="reviews" role="tab" aria-selected="false" data-i18n="tabReviews">Reviews</button>
+              </div>
+              <div class="mt-6">
+                <article class="tab-panel active" id="tab-description" role="tabpanel"></article>
+                <article class="tab-panel" id="tab-ingredients" role="tabpanel"></article>
+                <article class="tab-panel" id="tab-benefits" role="tabpanel"></article>
+                <article class="tab-panel" id="tab-reviews" role="tabpanel"></article>
+              </div>
+            </div>
+          </article>
         </div>
-        <div class="pt-6">
-          <article class="tab-panel active" id="tab-description" role="tabpanel"></article>
-          <article class="tab-panel" id="tab-ingredients" role="tabpanel"></article>
-          <article class="tab-panel" id="tab-benefits" role="tabpanel"></article>
-          <article class="tab-panel" id="tab-reviews" role="tabpanel"></article>
-        </div>
-      </section>
+      </div>
     </section>
   </main>
-
   <div id="footer-root" data-component="footer"></div>
-
   <script src="../assets/js/main.js"></script>
   <script src="../assets/js/product.js"></script>
 </body>
