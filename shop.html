@@ -1,0 +1,62 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shop | Asalna</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;700;800&family=Marai:wght@400;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="asalna-shell py-4">
+    <div id="navRoot"></div>
+
+    <section class="mt-6 asalna-glass rounded-[2rem] p-6 reveal">
+      <p class="section-kicker" id="shopKicker"></p>
+      <h1 class="text-6xl font-display mt-2" id="shopTitle"></h1>
+      <p class="text-[#3a2818bf] mt-3" id="shopBody"></p>
+      <div class="grid md:grid-cols-5 gap-3 mt-5">
+        <input id="searchInput" class="asalna-input md:col-span-2" placeholder="Search honey">
+        <select id="categoryFilter" class="asalna-select"></select>
+        <input id="minPrice" type="number" class="asalna-input" placeholder="Min Price">
+        <input id="maxPrice" type="number" class="asalna-input" placeholder="Max Price">
+      </div>
+      <div class="mt-3 max-w-xs"><select id="sortFilter" class="asalna-select"></select></div>
+    </section>
+
+    <section class="mt-8">
+      <div id="shopRoot" class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4"></div>
+    </section>
+
+    <div id="footerRoot"></div>
+  </div>
+
+  <script src="js/app.js"></script>
+  <script src="js/shop.js"></script>
+  <script>
+    (function () {
+      const ar = Asalna.isArabic();
+      const categories = ar
+        ? [{ value: '', label: 'كل الفئات' }, { value: 'Signature', label: 'التوقيع' }, { value: 'Daily', label: 'يومي' }, { value: 'Wellness', label: 'صحة' }, { value: 'Fresh', label: 'منعش' }, { value: 'Raw Craft', label: 'خام فاخر' }, { value: 'Gift', label: 'هدايا' }]
+        : [{ value: '', label: 'All Categories' }, { value: 'Signature', label: 'Signature' }, { value: 'Daily', label: 'Daily' }, { value: 'Wellness', label: 'Wellness' }, { value: 'Fresh', label: 'Fresh' }, { value: 'Raw Craft', label: 'Raw Craft' }, { value: 'Gift', label: 'Gift' }];
+      const sorts = ar
+        ? [{ value: '', label: 'مميز' }, { value: 'price-low', label: 'السعر: الأقل إلى الأعلى' }, { value: 'price-high', label: 'السعر: الأعلى إلى الأقل' }, { value: 'rating', label: 'التقييم' }]
+        : [{ value: '', label: 'Featured' }, { value: 'price-low', label: 'Price: Low to High' }, { value: 'price-high', label: 'Price: High to Low' }, { value: 'rating', label: 'Rating' }];
+
+      document.getElementById('shopKicker').textContent = ar ? 'المتجر' : 'Shop';
+      document.getElementById('shopTitle').textContent = ar ? 'استكشف مجموعة أصلنا' : 'Explore Asalna Collection';
+      document.getElementById('shopBody').textContent = ar ? 'فلتر حسب الفئة والسعر والطابع. كل بطاقة مصممة لتشعر بالفخامة والحياة.' : 'Filter by category, price, and style. Every card is crafted to feel premium and alive.';
+      document.getElementById('searchInput').placeholder = ar ? 'ابحث عن العسل' : 'Search honey';
+      document.getElementById('minPrice').placeholder = ar ? 'أقل سعر' : 'Min Price';
+      document.getElementById('maxPrice').placeholder = ar ? 'أعلى سعر' : 'Max Price';
+      document.getElementById('categoryFilter').innerHTML = categories.map((c) => `<option value="${c.value}">${c.label}</option>`).join('');
+      document.getElementById('sortFilter').innerHTML = sorts.map((s) => `<option value="${s.value}">${s.label}</option>`).join('');
+    })();
+    document.getElementById('navRoot').innerHTML = Asalna.nav('shop');
+    document.getElementById('footerRoot').innerHTML = Asalna.footer();
+    Asalna.updateCartCount();
+    Asalna.applyReveal();
+  </script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | Asalna</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;700;800&family=Marai:wght@400;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="asalna-shell py-4">
+    <div id="navRoot"></div>
+
+    <section class="mt-6 grid lg:grid-cols-[1fr_.9fr] gap-5">
+      <article class="asalna-glass rounded-[2rem] p-6 reveal">
+        <p class="section-kicker">Contact</p>
+        <h1 class="text-6xl font-display mt-2">Let us craft your honey experience.</h1>
+        <p class="mt-4 text-[#3a2818cc]">For wholesale, gifting, collaborations, or special orders, connect with the Asalna team.</p>
+        <form id="contactForm" class="grid gap-3 mt-5">
+          <input class="asalna-input" required placeholder="Full name">
+          <input class="asalna-input" required type="email" placeholder="Email">
+          <input class="asalna-input" placeholder="Subject">
+          <textarea class="asalna-textarea" rows="5" required placeholder="Message"></textarea>
+          <button class="btn-gold w-fit">Send Message</button>
+        </form>
+      </article>
+      <div class="asalna-glass rounded-[2rem] p-3 reveal">
+        <img src="assets/images/honey-wildflower.jpg" alt="contact" class="w-full h-full min-h-[420px] object-cover rounded-[1.5rem] bg-gradient-to-b from-[#f7e3b8] to-[#e6c580]">
+      </div>
+    </section>
+
+    <div id="footerRoot"></div>
+  </div>
+
+  <script src="js/app.js"></script>
+  <script>
+    document.getElementById('navRoot').innerHTML = Asalna.nav('contact');
+    document.getElementById('footerRoot').innerHTML = Asalna.footer();
+    Asalna.updateCartCount();
+    Asalna.applyReveal();
+    document.getElementById('contactForm').addEventListener('submit', function (e) { e.preventDefault(); Asalna.toast('Message sent'); this.reset(); });
+  </script>
+</body>
+</html>

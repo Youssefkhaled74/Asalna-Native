@@ -1,0 +1,44 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkout | Asalna</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;700;800&family=Marai:wght@400;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="asalna-shell py-4">
+    <div id="navRoot"></div>
+
+    <section class="mt-6 grid lg:grid-cols-[1fr_360px] gap-6">
+      <form id="checkoutForm" class="asalna-glass rounded-3xl p-5 reveal">
+        <p class="section-kicker">Checkout</p>
+        <h1 class="text-5xl font-display mt-2">Finalize your Asalna order</h1>
+        <div class="grid md:grid-cols-2 gap-3 mt-5">
+          <div><label class="text-sm font-semibold">Name *</label><input class="asalna-input mt-1" name="name" required></div>
+          <div><label class="text-sm font-semibold">Phone *</label><input class="asalna-input mt-1" name="phone" required></div>
+          <div class="md:col-span-2"><label class="text-sm font-semibold">Address *</label><input class="asalna-input mt-1" name="address" required></div>
+          <div><label class="text-sm font-semibold">City *</label><input class="asalna-input mt-1" name="city" required></div>
+          <div><label class="text-sm font-semibold">Coupon</label><input class="asalna-input mt-1" name="coupon" placeholder="ASALNA10"></div>
+          <div class="md:col-span-2"><label class="text-sm font-semibold">Notes</label><textarea class="asalna-textarea mt-1" name="notes" rows="4"></textarea></div>
+        </div>
+        <button class="btn-gold mt-5" type="submit">Place Order</button>
+      </form>
+
+      <aside id="checkoutSummary"></aside>
+    </section>
+
+    <div id="footerRoot"></div>
+  </div>
+
+  <script src="js/app.js"></script>
+  <script src="js/checkout.js"></script>
+  <script>
+    document.getElementById('navRoot').innerHTML = Asalna.nav('cart');
+    document.getElementById('footerRoot').innerHTML = Asalna.footer();
+    Asalna.updateCartCount();
+  </script>
+</body>
+</html>

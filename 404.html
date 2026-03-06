@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Asalna | Page Not Found</title>
+  <meta name="description" content="The page you requested could not be found.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;700;800&family=Marai:wght@400;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="asalna-shell min-h-screen py-4 flex flex-col">
+    <div id="navRoot"></div>
+
+    <main class="flex-1 grid place-items-center">
+      <section class="asalna-glass rounded-[2.2rem] p-8 md:p-12 max-w-3xl w-full reveal text-center" style="background:linear-gradient(132deg, rgba(29,19,11,.94), rgba(94,58,20,.9) 58%, rgba(95,100,52,.82)); color:#fff4df;">
+        <p class="section-kicker !text-[#f8e3b6]">Error 404</p>
+        <h1 class="text-7xl md:text-8xl font-display leading-none mt-2">Lost In Honeycomb</h1>
+        <p class="mt-4 text-[#fff4dfd4] max-w-xl mx-auto">The page melted away into golden layers. Return to the boutique storefront and continue your Asalna journey.</p>
+        <div class="mt-8 flex flex-wrap items-center justify-center gap-3">
+          <a href="index.html" class="btn-gold">Back To Home</a>
+          <a href="shop.html" class="btn-soft !text-[#fff4df] !border-white/30 !bg-white/10">Browse Shop</a>
+        </div>
+      </section>
+    </main>
+
+    <div id="footerRoot"></div>
+  </div>
+
+  <script src="js/app.js"></script>
+  <script>
+    (function () {
+      document.getElementById('navRoot').innerHTML = Asalna.nav('');
+      document.getElementById('footerRoot').innerHTML = Asalna.footer();
+      Asalna.updateCartCount();
+      Asalna.applyReveal();
+    })();
+  </script>
+</body>
+</html>

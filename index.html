@@ -1,200 +1,159 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Asalna | Honey With Presence</title>
-  <meta name="description" content="Asalna is a premium honey brand with a stronger visual identity, richer storytelling, and a more memorable ecommerce experience.">
-  <meta property="og:title" content="Asalna | Honey With Presence">
-  <meta property="og:description" content="A warmer, bolder honey brand experience built around premium Egyptian harvests.">
-  <meta property="og:type" content="website">
-  <meta property="og:image" content="assets/images/facebook-cover.png">
-  <meta property="og:url" content="https://asalna.example.com/">
+  <title>Asalna | Premium Honey Boutique</title>
+  <meta name="description" content="Asalna premium Egyptian honey boutique with artistic ecommerce experience.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Marai:wght@400;700&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;700;800&family=Marai:wght@400;700&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
-<body class="page-shell antialiased">
-  <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-[#24170c] text-white px-4 py-2 rounded-xl z-50">Skip to content</a>
-  <div id="navbar-root" data-component="navbar"></div>
+<body>
+  <div class="asalna-shell py-4">
+    <div id="navRoot"></div>
 
-  <main id="main-content">
-    <section class="hero-panel">
-      <div class="max-w-7xl mx-auto px-4 sm:px-8 hero-grid">
-        <article class="hero-copy reveal-fade">
-          <p class="section-kicker" data-i18n="heroKicker">Not another generic honey store</p>
-          <h1 class="hero-title font-display" data-i18n="heroTitle">A honey brand with weight, warmth, and presence.</h1>
-          <p class="hero-text" data-i18n="heroText">Asalna is designed like the product should feel: rich, honest, textured, and memorable. Every jar carries a distinct floral source, slow handling, and a stronger visual identity than typical commodity websites.</p>
-          <div class="hero-actions">
-            <a href="pages/shop.html" class="btn-premium" data-i18n="shopNow">Shop the harvest</a>
-            <a href="#why-asalna" class="btn-chip" data-i18n="whyAsalna">See the difference</a>
-          </div>
-          <div class="hero-microcopy">
-            <div class="btn-chip"><span>01</span><span data-i18n="heroBadgeText">Spring citrus extraction now live</span></div>
-            <div class="btn-chip"><span>02</span><span data-i18n="heroHarvestText">Mountain air, citrus farms, sidr trees, and black seed blends become distinct characters, not generic SKUs.</span></div>
-          </div>
-          <div class="hero-metric-grid">
-            <div class="metric-pillar"><strong>05</strong><span data-i18n="heroStatOne">Wild bloom zones</span></div>
-            <div class="metric-pillar"><strong>SM</strong><span data-i18n="heroStatTwo">Small batch flow</span></div>
-            <div class="metric-pillar"><strong>360</strong><span data-i18n="heroStatThree">Layered taste</span></div>
-          </div>
-        </article>
-
-        <div class="hero-visual reveal-scale">
-          <div class="hero-art">
-            <div class="grid-overlay"></div>
-            <img src="assets/images/facebook-cover.png" alt="Asalna honey visual" loading="eager">
-            <div class="hero-badge">
-              <strong data-i18n="heroBadgeTitle">Fresh drop</strong>
-              <span data-i18n="heroBadgeText">Spring citrus extraction now live</span>
-            </div>
-            <div class="floating-note">
-              <strong data-i18n="heroNoteTitle">Texture-first brand</strong>
-              <span data-i18n="heroNoteText">Warm gradients, dense typography, and editorial spacing make the site feel premium instead of template-driven.</span>
-            </div>
-            <div class="harvest-label">
-              <div>
-                <strong data-i18n="heroHarvestTitle">Every jar starts with place</strong>
-                <p data-i18n="heroHarvestText">Mountain air, citrus farms, sidr trees, and black seed blends become distinct characters, not generic SKUs.</p>
-              </div>
-              <div class="harvest-dot">AS</div>
-            </div>
-          </div>
+    <section class="mt-6 hero-wrap hero-premium asalna-glass reveal">
+      <article class="hero-copy">
+        <p class="section-kicker hero-kicker-chip" id="heroKicker"></p>
+        <h1 class="hero-title font-display" id="heroTitle"></h1>
+        <p class="mt-4 text-[#fff4dfd7] max-w-xl" id="heroBody"></p>
+        <div class="mt-6 flex flex-wrap gap-3 hero-actions">
+          <a href="shop.html" class="btn-gold" id="heroCtaShop"></a>
+          <a href="#origin" class="btn-soft" id="heroCtaOrigin"></a>
         </div>
+        <div class="mt-6 grid sm:grid-cols-3 gap-3 hero-stats">
+          <div class="hero-stat"><strong class="block text-2xl font-display">08</strong><span class="text-xs tracking-[.18em] uppercase" id="statProducts"></span></div>
+          <div class="hero-stat"><strong class="block text-2xl font-display">SM</strong><span class="text-xs tracking-[.18em] uppercase" id="statBatches"></span></div>
+          <div class="hero-stat"><strong class="block text-2xl font-display">EG</strong><span class="text-xs tracking-[.18em] uppercase" id="statOrigin"></span></div>
+        </div>
+      </article>
+      <div class="hero-media">
+        <img src="assets/images/hero.jpg" alt="Asalna premium honey" data-parallax="0.06">
+        <div class="float-card asalna-glass top-4 left-4 floating-card"><strong class="font-display block" id="floatTitleA"></strong><span class="text-xs text-[#3a2818b8]" id="floatBodyA"></span></div>
+        <div class="float-card asalna-glass bottom-4 right-4 floating-card"><strong class="font-display block">عسلنا</strong><span class="text-xs text-[#3a2818b8]" id="floatBodyB"></span></div>
       </div>
     </section>
 
-    <section class="content-section">
-      <div class="max-w-7xl mx-auto px-4 sm:px-8">
-        <div class="info-strip reveal-rise">
-          <article><strong data-i18n="shopStatOne">Curated varieties</strong><span>Each jar leads with source, mood, and feel.</span></article>
-          <article><strong data-i18n="shopStatTwo">Fast visual scan</strong><span>The hierarchy is clearer and easier to trust.</span></article>
-          <article><strong data-i18n="shopStatThree">Gift-ready positioning</strong><span>The brand now looks premium enough to be shared.</span></article>
+    <section class="mt-12 reveal">
+      <div class="flex items-end justify-between gap-4 mb-5">
+        <div><p class="section-kicker" id="featuredKicker"></p><h2 class="text-5xl font-display" id="featuredTitle"></h2></div>
+        <a class="btn-soft" href="shop.html" id="featuredViewAll"></a>
+      </div>
+      <div id="featuredGrid" class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4"></div>
+    </section>
+
+    <div class="honey-separator my-14 reveal"></div>
+
+    <section class="grid lg:grid-cols-[1.1fr_.9fr] gap-5" id="origin">
+      <article class="asalna-glass rounded-[2rem] p-6 reveal">
+        <p class="section-kicker" id="originKicker"></p>
+        <h2 class="text-5xl font-display mt-2" id="originTitle"></h2>
+        <p class="mt-3 text-[#3a2818c9] leading-8" id="originBody"></p>
+        <div class="grid sm:grid-cols-2 gap-3 mt-5">
+          <div class="asalna-glass rounded-2xl p-4"><p class="section-kicker" id="benefitsKicker"></p><p class="mt-2 text-sm text-[#3a2818bf]" id="benefitsBody"></p></div>
+          <div class="asalna-glass rounded-2xl p-4"><p class="section-kicker" id="whyKicker"></p><p class="mt-2 text-sm text-[#3a2818bf]" id="whyBody"></p></div>
         </div>
+      </article>
+      <div class="grid sm:grid-cols-2 gap-4">
+        <article class="asalna-glass rounded-3xl p-4 reveal"><h3 class="text-4xl font-display" id="testimonialsTitle"></h3><p class="text-sm mt-2 text-[#3a2818bf]" id="testimonialsQuote"></p><p class="mt-2 text-xs tracking-[.16em] uppercase">Nour - Cairo</p></article>
+        <article class="asalna-glass rounded-3xl p-4 reveal"><h3 class="text-4xl font-display" id="categoriesTitle"></h3><div id="categoryStack" class="mt-3 space-y-2"></div></article>
+        <article class="asalna-glass rounded-3xl p-4 reveal sm:col-span-2"><h3 class="text-4xl font-display" id="bestTitle"></h3><div id="bestGrid" class="grid sm:grid-cols-3 gap-3 mt-3"></div></article>
       </div>
     </section>
 
-    <section class="content-section">
-      <div class="max-w-7xl mx-auto px-4 sm:px-8">
-        <div class="section-head reveal-fade">
-          <div>
-            <p class="section-kicker" data-i18n="signatureCollection">Signature collection</p>
-            <h2 class="section-title" data-i18n="craftedVarieties">Five jars. Five different moods.</h2>
-          </div>
-          <a href="pages/shop.html" class="btn-ghost" data-i18n="viewFullShop">View the full collection</a>
-        </div>
-        <div id="featuredProducts" class="product-grid"></div>
+    <section class="mt-12 reveal">
+      <div class="flex items-end justify-between gap-4 mb-4"><div><p class="section-kicker" id="galleryKicker"></p><h2 class="text-5xl font-display" id="galleryTitle"></h2></div></div>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <img class="rounded-3xl h-56 w-full object-cover asalna-glass" src="assets/images/hero.jpg" alt="gallery">
+        <img class="rounded-3xl h-56 w-full object-cover asalna-glass" src="assets/images/honey-wildflower.jpg" alt="gallery">
+        <img class="rounded-3xl h-56 w-full object-cover asalna-glass" src="assets/images/honey-blackseed.jpg" alt="gallery">
+        <img class="rounded-3xl h-56 w-full object-cover asalna-glass" src="assets/images/honey-citrus.jpg" alt="gallery">
       </div>
     </section>
 
-    <section id="why-asalna" class="content-section">
-      <div class="max-w-7xl mx-auto px-4 sm:px-8 split-layout">
-        <div class="story-slab reveal-fade">
-          <p class="section-kicker" data-i18n="whyChooseAsalna">Why Asalna works</p>
-          <h2 class="section-title" data-i18n="trustedPurity">Purity is only part of the story.</h2>
-          <p class="section-copy">The redesign makes the brand feel more deliberate through stronger typography, warmer surfaces, and tighter content hierarchy. It no longer looks interchangeable.</p>
-          <div class="story-grid mt-8">
-            <article class="story-card reveal-rise">
-              <span class="story-step">01</span>
-              <h3 data-i18n="storyCardOneTitle">Richer direction</h3>
-              <p data-i18n="storyCardOneText">Typography, gradients, and framed content now feel intentional instead of standard.</p>
-            </article>
-            <article class="story-card reveal-rise">
-              <span class="story-step">02</span>
-              <h3 data-i18n="storyCardTwoTitle">Commercial clarity</h3>
-              <p data-i18n="storyCardTwoText">The site communicates premium value faster, which matters for conversion and wholesale trust.</p>
-            </article>
-            <article class="story-card reveal-rise">
-              <span class="story-step">03</span>
-              <h3 data-i18n="storyCardThreeTitle">Product-first flow</h3>
-              <p data-i18n="storyCardThreeText">Jars, origin, and taste notes lead the page instead of random decorative filler.</p>
-            </article>
-          </div>
-        </div>
-
-        <div class="feature-grid">
-          <article class="feature-card reveal-rise">
-            <div class="feature-icon"><svg viewBox="0 0 24 24"><path d="M12 3c4 3 6 6 6 10a6 6 0 1 1-12 0c0-4 2-7 6-10z"></path></svg></div>
-            <h3 class="feature-title" data-i18n="featureOrganicTitle">Source-led</h3>
-            <p class="feature-text" data-i18n="featureOrganicText">Each product starts from a real forage environment, not a stock product page.</p>
-          </article>
-          <article class="feature-card reveal-rise">
-            <div class="feature-icon"><svg viewBox="0 0 24 24"><path d="M4 18V6m5 12V9m5 9V4m6 14V11"></path></svg></div>
-            <h3 class="feature-title" data-i18n="featureNaturalTitle">Visually distinct</h3>
-            <p class="feature-text" data-i18n="featureNaturalText">The brand language now feels crafted, layered, and recognizably yours.</p>
-          </article>
-          <article class="feature-card reveal-rise">
-            <div class="feature-icon"><svg viewBox="0 0 24 24"><path d="M5 12h14M12 5v14"></path></svg></div>
-            <h3 class="feature-title" data-i18n="featureNoAdditivesTitle">Clean composition</h3>
-            <p class="feature-text" data-i18n="featureNoAdditivesText">No fake wellness claims, no clutter, no filler sections.</p>
-          </article>
-          <article class="feature-card reveal-rise">
-            <div class="feature-icon"><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"></path></svg></div>
-            <h3 class="feature-title" data-i18n="featureLabTitle">Confidence ready</h3>
-            <p class="feature-text" data-i18n="featureLabText">Built to support retail trust, gifting, and premium positioning.</p>
-          </article>
-        </div>
-      </div>
+    <section class="mt-12 asalna-glass rounded-[2rem] p-6 reveal" style="background:linear-gradient(130deg, rgba(28,17,9,.95), rgba(84,50,17,.9) 56%, rgba(93,98,50,.82)); color:#fff4df;">
+      <p class="section-kicker !text-[#f8e3b6]" id="newsletterKicker"></p>
+      <h2 class="text-5xl font-display mt-2" id="newsletterTitle"></h2>
+      <p class="mt-3 text-[#fff4dfcc]" id="newsletterBody"></p>
+      <form class="mt-5 grid sm:grid-cols-[1fr_auto] gap-3" id="newsletterForm">
+        <input id="newsletterEmail" class="asalna-input !bg-white/90 !text-[#1f150c]" required type="email" placeholder="Email address">
+        <button id="newsletterBtn" class="btn-gold"></button>
+      </form>
     </section>
 
-    <section class="content-section">
-      <div class="max-w-7xl mx-auto px-4 sm:px-8">
-        <div class="section-head reveal-fade">
-          <div>
-            <p class="section-kicker" data-i18n="testimonials">What people notice</p>
-            <h2 class="section-title" data-i18n="lovedBy">Buyers remember the taste and the presentation.</h2>
-          </div>
-        </div>
-        <div class="testimonial-shell reveal-scale">
-          <div id="testimonialTrack" class="testimonial-track">
-            <article class="testimonial-slide"><p>�The honey tastes premium, but the website finally looks premium too. It feels like a real brand now.�</p><h3>Layla M.</h3></article>
-            <article class="testimonial-slide"><p>�The new design makes every product look intentional. It is easier to browse and much easier to remember.�</p><h3>Omar R.</h3></article>
-            <article class="testimonial-slide"><p>�This looks less like a generic shop and more like a brand I would gift without hesitation.�</p><h3>Nour A.</h3></article>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="content-section">
-      <div class="max-w-5xl mx-auto px-4 sm:px-8">
-        <div class="newsletter-card reveal-fade">
-          <p class="section-kicker" data-i18n="newsletter">Stay close to the next drop</p>
-          <h2 class="section-title" data-i18n="newsletterTitle">Get limited harvest announcements before they sell out.</h2>
-          <p class="section-copy" data-i18n="newsletterText">Use the list for rare releases, gifting windows, and small seasonal runs only.</p>
-          <form class="newsletter-form" aria-label="Newsletter Subscription">
-            <input id="newsletterEmail" type="email" required placeholder="Enter your email" data-i18n-placeholder="emailPlaceholder">
-            <button type="submit" class="btn-premium" data-i18n="subscribe">Join the list</button>
-          </form>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <div id="footer-root" data-component="footer"></div>
-
-  <div id="quickViewModal" class="fixed inset-0 z-[70] hidden" aria-hidden="true" role="dialog" aria-modal="true">
-    <div class="absolute inset-0 bg-[#24170c]/60" data-close-modal></div>
-    <div class="relative h-full flex items-center justify-center p-4 sm:p-6">
-      <div class="detail-panel w-full max-w-4xl overflow-hidden">
-        <div class="detail-grid">
-          <div class="detail-visual"><img id="modalImage" src="assets/images/raw-honey.svg" alt="Honey product preview" loading="lazy"></div>
-          <div class="detail-copy">
-            <button class="ml-auto block text-[#24170c] text-2xl" aria-label="Close quick view" data-close-modal">&times;</button>
-            <p id="modalCategory" class="section-kicker mt-4"></p>
-            <h3 id="modalName" class="font-display text-5xl text-[#24170c] mt-4"></h3>
-            <p id="modalDescription" class="section-copy"></p>
-            <div class="cta-row mt-6">
-              <span id="modalPrice" class="price-pill"></span>
-              <button id="modalAddToCart" class="btn-premium" data-i18n="add">Add to cart</button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+    <div id="footerRoot"></div>
   </div>
 
-  <script src="assets/js/main.js"></script>
+  <script src="js/app.js"></script>
+  <script>
+    (function () {
+      document.getElementById('navRoot').innerHTML = Asalna.nav('index');
+      document.getElementById('footerRoot').innerHTML = Asalna.footer();
+
+      const ar = Asalna.isArabic();
+      const t = {
+        heroKicker: ar ? 'بيت عسل فاخر' : 'Luxury Honey House',
+        heroTitle: ar ? 'عسلنا يحول العسل المصري إلى طقس حديث متوهج.' : 'Asalna shapes Egyptian honey into a glowing modern ritual.',
+        heroBody: ar ? 'تجربة بوتيك ملهمة من انسياب العسل وهندسة الشمع وأجواء ذهبية دافئة.' : 'A boutique ecommerce world inspired by honey flow, wax-cell geometry, and warm golden atmosphere.',
+        heroCtaShop: ar ? 'تسوق المجموعة' : 'Shop Collection',
+        heroCtaOrigin: ar ? 'قصة المصدر' : 'Origin Story',
+        statProducts: ar ? 'منتجات مختارة' : 'Curated products',
+        statBatches: ar ? 'دفعات صغيرة' : 'Small batches',
+        statOrigin: ar ? 'مصدر مصري' : 'Egyptian origin',
+        floatTitleA: ar ? 'سدر ريزيرف' : 'Sidr Reserve',
+        floatBodyA: ar ? 'حصاد موسمي محدود' : 'Limited seasonal harvest',
+        floatBodyB: ar ? 'دفء مصري فاخر' : 'Premium Egyptian warmth',
+        featuredKicker: ar ? 'عسل مميز' : 'Featured Honey',
+        featuredTitle: ar ? 'إصدارات التوقيع' : 'Signature drops',
+        featuredViewAll: ar ? 'عرض الكل' : 'View all',
+        originKicker: ar ? 'قصة منشأ العسل' : 'Honey Origin Story',
+        originTitle: ar ? 'من زهر الصحراء إلى طقس مائدة راقٍ.' : 'From desert bloom to refined table ritual.',
+        originBody: ar ? 'تتعاون أصلنا مع مجتمعات النحالين المصريين من مرتفعات سيناء إلى زهور الدلتا وبساتين الحمضيات. كل برطمان يحمل شفافية المصدر ونوتات التذوق وتقديمًا فاخرًا.' : 'Asalna partners with Egyptian beekeeping communities across Sinai heights, Delta blossoms, and citrus fields. Every jar carries source clarity, taste notes, and premium presentation.',
+        benefitsKicker: ar ? 'فوائد العسل' : 'Benefits of Honey',
+        benefitsBody: ar ? 'حلاوة طبيعية ونكهة عطرية وقوام متوازن للاستخدام اليومي.' : 'Natural sweetness, aromatic depth, and balanced texture for daily use.',
+        whyKicker: ar ? 'لماذا أصلنا' : 'Why Asalna',
+        whyBody: ar ? 'هوية بصرية مميزة وجودة ممتازة وتجربة شراء كاملة تعمل بالكامل.' : 'Distinct visual identity, premium quality, and fully working ecommerce logic.',
+        testimonialsTitle: ar ? 'آراء العملاء' : 'Testimonials',
+        testimonialsQuote: ar ? '"الطعم غني والهوية فعلاً فاخرة."' : '"The taste is rich and the brand feels truly luxurious."',
+        categoriesTitle: ar ? 'الفئات' : 'Categories',
+        bestTitle: ar ? 'الأكثر مبيعًا' : 'Best Sellers',
+        galleryKicker: ar ? 'معرض إنستجرام' : 'Instagram Gallery',
+        galleryTitle: ar ? 'مزاج العسل' : 'Honey moodboard',
+        newsletterKicker: ar ? 'النشرة البريدية' : 'Newsletter',
+        newsletterTitle: ar ? 'انضم لدائرتنا الذهبية' : 'Join our golden circle',
+        newsletterBody: ar ? 'استقبل الإصدارات المحدودة وعروض الهدايا الموسمية وقصص العسل الحرفي.' : 'Receive limited releases, seasonal gift drops, and craft honey stories.',
+        newsletterBtn: ar ? 'اشترك' : 'Subscribe'
+      };
+      Object.keys(t).forEach((key) => {
+        const node = document.getElementById(key);
+        if (node) node.textContent = t[key];
+      });
+      document.getElementById('newsletterEmail').placeholder = ar ? 'البريد الإلكتروني' : 'Email address';
+
+      const products = Asalna.getProducts();
+      const featured = products.filter((p) => p.tags.includes('best') || p.badge === 'Limited').slice(0, 4);
+      const best = products.filter((p) => p.tags.includes('best')).slice(0, 3);
+      const categories = [...new Set(products.map((p) => p.category))];
+
+      document.getElementById('featuredGrid').innerHTML = featured.map((p) => `
+        <article class="asalna-glass product-card floating-card reveal">
+          <img src="${p.image}" alt="${p.name}">
+          <div class="p-3"><span class="badge-pill">${Asalna.localBadge(p.badge)}</span><h3 class="font-display text-3xl mt-2">${ar ? (p.nameAr || p.name) : p.name}</h3><p class="text-sm text-[#3a2818bf] mt-2">${ar ? p.description : p.short}</p><div class="mt-3 flex items-center justify-between"><strong>${Asalna.money(p.price)}</strong><a class="btn-soft text-sm" href="product.html?id=${p.id}">${ar ? 'عرض' : 'View'}</a></div></div>
+        </article>
+      `).join('');
+
+      document.getElementById('bestGrid').innerHTML = best.map((p) => `<a href="product.html?id=${p.id}" class="asalna-glass rounded-2xl p-3 block"><p class="text-xs section-kicker">${Asalna.localBadge(p.badge)}</p><h4 class="font-display text-2xl mt-1">${ar ? (p.nameAr || p.name) : p.name}</h4><p class="text-sm mt-1">${Asalna.money(p.price)}</p></a>`).join('');
+      document.getElementById('categoryStack').innerHTML = categories.map((c) => `<div class="badge-pill">${Asalna.localCategory(c)}</div>`).join('');
+
+      document.getElementById('newsletterForm').addEventListener('submit', function (e) { e.preventDefault(); Asalna.toast(ar ? 'تم الاشتراك بنجاح' : 'Subscribed successfully'); this.reset(); });
+
+      Asalna.updateCartCount();
+      Asalna.applyReveal();
+      Asalna.initParallax();
+    })();
+  </script>
 </body>
 </html>

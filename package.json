@@ -1,0 +1,12 @@
+﻿{
+  "name": "asalna-premium-store",
+  "version": "1.0.0",
+  "description": "Premium vanilla ecommerce experience for Asalna honey",
+  "main": "server/server.js",
+  "scripts": {
+    "start": "node server/server.js"
+  },
+  "dependencies": {
+    "sqlite3": "^5.1.7"
+  }
+}
